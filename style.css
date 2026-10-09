@@ -1,5 +1,23 @@
 body, html {
     padding: 20px;
+    background-color: #010409;
+    color: #e6edf3;
+}
+
+#pesquisar-input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #484f58;
+  color: #b1bac4;
+  padding: 9px;
+  cursor: text;
+  margin: 25px 0px;
+  width: 500px;
 }
 
 .lista-atores {
@@ -10,12 +28,41 @@ body, html {
 }
 
 .card-ator {
+    animation: card-aparecer normal 0.5s ease-in;
     display: flex;
-    padding: 5px;
-    width: 215px;
+    background-color: #264f78;
+    padding: 25px;
+    width: 250px;
+    height: 215px;
+    height: auto;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 8px;
-    border: 1px black solid;
+    transition: transform 0.2s ease;
+}
+
+.card-ator h2, h3, p {
+    margin: 5px 0px;
+}
+
+.card-ator:hover {
+    transform: scale(1.2);
+    background-color: #1c3957;
+}
+
+.card-ator:active {
+    transform: scale(0.8);
+    background-color: #b1bac4;
+}
+
+/* Animações */
+@keyframes card-aparecer {
+    from {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
 }

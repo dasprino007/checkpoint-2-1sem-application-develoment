@@ -9,8 +9,9 @@ function renderAtores(atores) {
             <div class="card-ator">
                 <img src="${ator.foto}" alt="${"Foto do " + ator.nome}">
                 <h2>${ator.nome}</h2>
-                <span>${ator.nascimento}</span>
                 <p>${ator.pais}</p>
+                <h3>Data de nascimento</h3>
+                <span>${ator.nascimento}</span>
             </div>
         `;
   });
